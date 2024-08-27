@@ -116,3 +116,27 @@ header form{
     background-color: wheat;
     flex: 1;
 }
+@media screen and (max-width:1200px) {
+    .display-infos{
+        width: 90%;
+    }
+}
+@media screen and (max-width:800px) {
+    .display-infos{
+        flex-direction: column;
+        /* width: 60%; */
+        transform: translate(-50%, -6rem);
+        text-align: center;
+    }
+    header form {
+        width: 90%;
+    }
+    header h1{
+        text-align: center;
+    }
+    .info,.info-content{
+        align-items: center;
+        font-size: 1rem;
+        gap: 0;
+    }
+}

@@ -12,9 +12,9 @@ function IpForm() {
       getGeoInfos(text)
     }
   }
-useLayoutEffect(()=>{
-  getGeoInfos('')
-},[])
+// useLayoutEffect(()=>{
+//   getGeoInfos('')
+// },[])
   return (
     <>
         <header>
