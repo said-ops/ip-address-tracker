@@ -1,23 +1,26 @@
 import React from 'react'
+import useGeoStore from '../store/geoStore'
 
 function DisplayInfo() {
+
+    const {ip,location,timeZone,isp} = useGeoStore(state=>state.geoInfos)
   return (
     <section className='display-infos'>
         <div className='info'>
             <h2 className='info-heading'>ip address</h2>
-            <p className='info-content'>192.212.174.101</p>
+            <p className='info-content'>{ip}</p>
         </div>
         <div className='info'>
             <h2 className='info-heading'>Location</h2>
-            <p className='info-content'>brooklyn,ny 10001</p>
+            <p className='info-content'>{location}</p>
         </div>
         <div className='info'>
             <h2 className='info-heading'>timezone</h2>
-            <p className='info-content'>UTC -05:00</p>
+            <p className='info-content'>{timeZone}</p>
         </div>
         <div className='info'>
             <h2 className='info-heading'>isp</h2>
-            <p className='info-content'>SpaceX Starlink</p>
+            <p className='info-content'>{isp}</p>
         </div>
     </section>
   )
