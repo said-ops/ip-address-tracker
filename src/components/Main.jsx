@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import L from 'leaflet'
 import useGeoStore from '../store/geoStore'
+import 'leaflet/dist/leaflet.css';
 
 function Main() {
 
