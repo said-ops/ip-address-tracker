@@ -10,7 +10,9 @@ const initialState = {
     ip:'',
     location:'',
     timeZone:'',
-    isp:''
+    isp:'',
+    long:'',
+    lat:''
 }
 const useGeoStore = create((set) => ({
 
@@ -24,8 +26,12 @@ const useGeoStore = create((set) => ({
                 ip:data.ip,
                 location:data.location.region.name,
                 timeZone:data.time_zone.name,
-                isp:data.company.name
+                isp:data.company.name,
+                long:data.location.longitude,
+                lat:data.location.latitude,
             }})
+            console.log(useGeoStore.getState().geoInfos.long)
+            console.log(useGeoStore.getState().geoInfos.lat)
         })
         .catch(err=>{
             alert(err)

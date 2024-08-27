@@ -9,8 +9,6 @@ function IpForm() {
   const handleSubmit = (e)=>{
     e.preventDefault()
     if(e.target.value !==''){
-      
-      setText(e.target.value)
       getGeoInfos(text)
     }
   }
