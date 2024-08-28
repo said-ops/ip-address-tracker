@@ -1,21 +1,21 @@
 import { create } from "zustand";
 
-const initialState = {
-    ip:'192.212.174.101',
-    location:'brooklyn,ny 10001',
-    timeZone:'UTC -05:00',
-    isp:'SpaceX Starlink',
-    lat:'34.06138',
-    long:'-118.08164'
-}
 // const initialState = {
-//     ip:'',
-//     location:'',
-//     timeZone:'',
-//     isp:'',
-//     long:'',
-//     lat:''
+//     ip:'192.212.174.101',
+//     location:'brooklyn,ny 10001',
+//     timeZone:'UTC -05:00',
+//     isp:'SpaceX Starlink',
+//     lat:'34.06138',
+//     long:'-118.08164'
 // }
+const initialState = {
+    ip:'',
+    location:'',
+    timeZone:'',
+    isp:'',
+    long:'',
+    lat:''
+}
 const useGeoStore = create((set) => ({
 
     geoInfos : initialState,
